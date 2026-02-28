@@ -18,6 +18,8 @@ public class Projecto_final {
         Libro libro4 = new Libro("La odisea", "Homero", "Epopeya", 0, 2);
         Libro libro5 = new Libro("Estravagario", "Pablo Neruda", "Poesía", 1958, 3);
         Libro libro6 = new Libro("Danza de Dragones", "George R. R. Martin", "Fantasía", 2011, 2);
+        Libro libro7 = new LibroDigital("Don Quijote", "Cervantes", "Novela", 1605, "PDF", 2.5);
+        Libro libro8 = new LibroDigital("1984", "George Orwell", "Distopía", 1949, "EPUB", 1.8);
 
         System.out.print("¿Tienes un usuario? (si/no): ");
         String respuesta = sc.nextLine();
@@ -212,6 +214,10 @@ public class Projecto_final {
                     System.out.println(libro5);
                     System.out.println("\n--- Libro 6 ---");
                     System.out.println(libro6);
+                    System.out.println("\n--- Libro 7 ---");
+                    System.out.println(libro7);
+                    System.out.println("\n--- Libro 8 ---");
+                    System.out.println(libro8);
                     break;
 
                 case 2:
@@ -227,22 +233,24 @@ public class Projecto_final {
                     System.out.println("4. " + libro4.getTitulo());
                     System.out.println("5. " + libro5.getTitulo());
                     System.out.println("6. " + libro6.getTitulo());
-                    System.out.print("Opción (1 a 6): ");
+                    System.out.println("7. " + libro7.getTitulo());
+                    System.out.println("8. " + libro8.getTitulo());
+                    System.out.print("Opción (1 a 8): ");
 
                     while (!sc.hasNextInt()) {
                         System.out.println("Error: Debes ingresar un número del 1 al 6.");
-                        System.out.print("Opción (1 a 6): ");
+                        System.out.print("Opción (1 a 8): ");
                         sc.next();
                     }
 
                     int p = sc.nextInt();
 
-                    while (p < 1 || p > 6) {
+                    while (p < 1 || p > 8) {
                         System.out.println("Error: Opción fuera de rango.");
-                        System.out.print("Opción (1 a 6): ");
+                        System.out.print("Opción (1 a 8): ");
                         while (!sc.hasNextInt()) {
                             System.out.println("Error: Debes ingresar un número.");
-                            System.out.print("Opción (1 a 6): ");
+                            System.out.print("Opción (1 a 8): ");
                             sc.next();
                         }
                         p = sc.nextInt();
@@ -255,6 +263,8 @@ public class Projecto_final {
                     else if (p == 4) libroP = libro4;
                     else if (p == 5) libroP = libro5;
                     else if (p == 6) libroP = libro6;
+                    else if (p == 7) libroP = libro7;
+                    else if (p == 8) libroP = libro8;
 
                     if (libroP != null && libroP.prestar()) {
                         usuarioActual.librosPrestados++;
@@ -272,22 +282,24 @@ public class Projecto_final {
                     System.out.println("4. " + libro4.getTitulo());
                     System.out.println("5. " + libro5.getTitulo());
                     System.out.println("6. " + libro6.getTitulo());
-                    System.out.print("Opción (1 a 6): ");
+                    System.out.println("7. " + libro7.getTitulo());
+                    System.out.println("8. " + libro8.getTitulo());
+                    System.out.print("Opción (1 a 8): ");
 
                     while (!sc.hasNextInt()) {
                         System.out.println("Error: Debes ingresar un número del 1 al 6.");
-                        System.out.print("Opción (1 a 6): ");
+                        System.out.print("Opción (1 a 8): ");
                         sc.next();
                     }
 
                     int d = sc.nextInt();
 
-                    while (d < 1 || d > 6) {
+                    while (d < 1 || d > 8) {
                         System.out.println("Error: Opción fuera de rango.");
-                        System.out.print("Opción (1 a 6): ");
+                        System.out.print("Opción (1 a 8): ");
                         while (!sc.hasNextInt()) {
                             System.out.println("Error: Debes ingresar un número.");
-                            System.out.print("Opción (1 a 6): ");
+                            System.out.print("Opción (1 a 8): ");
                             sc.next();
                         }
                         d = sc.nextInt();
@@ -300,6 +312,8 @@ public class Projecto_final {
                     else if (d == 4) libroD = libro4;
                     else if (d == 5) libroD = libro5;
                     else if (d == 6) libroD = libro6;
+                    else if (d == 7) libroD = libro7;
+                    else if (d == 8) libroD = libro8;
 
                     if (libroD != null && libroD.devolver()) {
                         usuarioActual.librosPrestados--;
