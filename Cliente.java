@@ -16,4 +16,9 @@ public class Cliente extends Persona {
     public Cliente() {
         this.librosPrestados = 0;
     }
+    @Override
+    public void mostrarInformacion() {
+    super.mostrarInformacion();
+    System.out.println("Libros prestados: " + librosPrestados);
+    }
 }

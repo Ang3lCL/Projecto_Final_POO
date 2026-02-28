@@ -15,7 +15,12 @@ public class Persona {
     public Persona() {
     }
 
-    // Getters y Setters (Encapsulamiento opcional)
+    public void mostrarInformacion() {
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Edad: " + edad);
+        System.out.println("ID: " + id);
+    }
+
     public String getNombre() {
         return nombre;
     }
