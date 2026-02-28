@@ -53,15 +53,3 @@ public class Libro {
     }
 }
 
-class LibroDigital extends Libro {
-
-    public LibroDigital(String titulo, String autor, String genero, int año, int copias) {
-        super(titulo, autor, genero, año, copias);
-    }
-
-    // Polimorfismo: comportamiento diferente
-    @Override
-    public boolean prestar() {
-        return true; // siempre disponible (ilimitado)
-    }
-}
